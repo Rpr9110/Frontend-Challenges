@@ -1,0 +1,253 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Root */
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* App CSS */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    background-color: var(--Very-dark-blue-main-BG);
+    font-family: Outfit, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 348px;
+    border-radius: 20px;
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 24px;
+}
+
+.header__image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: all ease-in-out 150ms 50ms;
+}
+
+.hero__wrapper {
+    max-height: 348px;
+    position: relative;
+    border-radius: 10px;
+    transition: all ease-in-out 150ms 50ms;
+}
+
+
+.hero__wrapper:hover .header__image {
+    opacity: 50%;
+}
+
+.hero__wrapper:hover {
+    background-color: var(--Cyan);
+}
+
+.view-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    z-index: 10;
+    transition: all ease-in-out 150ms 50ms;
+}
+
+.hero__wrapper:hover .view-svg {
+    opacity: 100%;
+}
+
+
+.header__title {
+    font-size: 24px;
+    color: var(--White);
+    font-weight: 600;
+    margin: 24px 0;
+    display: inline-block;
+    transition: all ease-in-out 150ms 50ms;
+}
+
+.header__title:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.header__caption {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    color: var(--Soft-blue);
+    margin-bottom: 24px;
+}
+
+.main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.price {
+    color: var(--Cyan);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.price > span {
+    margin-left: 4px;
+}
+
+.time-left {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--Soft-blue);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.user-profile {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.user-info {
+    color: var(--Soft-blue);
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+
+.user-info > span {
+    color: var(--White);
+    transition: all ease-in-out 150ms 50ms;
+}
+
+.user-info > span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 250px;
+    }
+
+    .hero__wrapper {
+        height: 250px;
+    }
+
+    .header__title {
+        font-size: 22px;
+        margin: 12px 0;
+    }
+
+    .header__caption {
+        font-size: 14px;
+        letter-spacing: normal;
+        margin-bottom: 12px;
+
+    }
+
+    .price, .time-left {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .user-info {
+        letter-spacing: 0;
+    }
+
+    .main-wrapper {
+        padding-bottom: 12px;
+    }
+
+    .user-profile {
+        width: 30px;
+        height: 30px;
+    }
+    .footer{
+        gap: 15px;
+    }
+
+}
