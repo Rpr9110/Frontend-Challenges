@@ -1,0 +1,243 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: #333333;
+    --grey-800: #1f1f1f;
+    --grey-900: #141414;
+}
+/* Fonts */
+@font-face {
+    font-family: "Inter Bold";
+    src: url(../assets/fonts/static/Inter-Bold.ttf);
+}
+@font-face {
+    font-family: "Inter Regular";
+    src: url(../assets/fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter SemiBold";
+    src: url(../assets/fonts/static/Inter-SemiBold.ttf);
+}
+
+/* Reset CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Styles */
+
+body {
+    font-size: 14px;
+    background-color: var(--grey-900);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--white);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+.main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 384px;
+    height: 608px;
+    background-color: var(--grey-800);
+    margin: 176px auto;
+    border-radius: 20px;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile__img {
+    width: 90px;
+    height: 90px;
+    margin-top: 40px;
+    border-radius: 100%;
+}
+.profile__name {
+    font-size: 24px;
+    color: var(--white);
+    font-family: "Inter Semibold";
+    margin: 30px 0 18px;
+}
+.profile__nation {
+    color: var(--green);
+    font-family: "Inter Bold";
+    margin-bottom: 32px;
+}
+.profile__discription {
+    font-family: "Inter Regular";
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+.links {
+    margin-top: 30px;
+}
+.link {
+    line-height: 45px;
+    font-family: "Inter Bold";
+    color: var(--white);
+    background-color: var(--grey-700);
+    margin-bottom: 16px;
+    text-align: center;
+    height: 45px;
+    border-radius: 10px;
+    width: 305px;
+    transition: all ease-in-out 100ms 20ms;
+}
+.link:hover {
+    background-color: var(--green);
+    color: #141414;
+}
+
+@media screen and (max-width: 375px) {
+    .main-box {
+        width: 325px;
+    }
+    .link {
+        width: 280px;
+    }
+}
