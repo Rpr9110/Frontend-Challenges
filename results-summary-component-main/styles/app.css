@@ -291,6 +291,12 @@ button {
     font-family: "HankenGrotesk Bold";
     font-size: 18px;
 }
+button:hover {
+    background: linear-gradient(
+        var(--light-slate-blue),
+        var(--light-royal-blue)
+    );
+}
 .btn {
     max-width: 288px;
     margin-top: 42px;
