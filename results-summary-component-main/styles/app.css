@@ -1,0 +1,336 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue: #7857ff;
+    --light-royal-blue: #2e2be9;
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    --white: #ffffff;
+    --pale-blue: #ebf1ff;
+    --light-lavender: #c8c7ff;
+    --dark-gray-blue: #303b5a;
+}
+/* Font */
+
+@font-face {
+    font-family: "HankenGrotesk Bold";
+    src: url(../assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+@font-face {
+    font-family: "HankenGrotesk ExtraBold";
+    src: url(../assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "HankenGrotesk Medium";
+    src: url(../assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+
+/* Reset CSS */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* App CSS */
+
+.main__box {
+    max-width: 736px;
+    height: 512px;
+    margin: 284px auto;
+    display: flex;
+    box-shadow: 4px 4px 100px var(--light-lavender);
+    border-radius: 50px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        var(--light-slate-blue),
+        var(--light-royal-blue)
+    );
+    text-align: center;
+    height: 100%;
+    padding-top: 44px;
+    flex-basis: 50%;
+    border-radius: 50px;
+}
+.result__title {
+    font-family: "HankenGrotesk Bold";
+    color: var(--light-lavender);
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 100%;
+    background: linear-gradient(var(--Violet-blue), var(--persian-blue));
+    font-size: 18px;
+    color: var(--light-slate-blue);
+    font-family: "HankenGrotesk Bold";
+}
+.score {
+    font-size: 78px;
+    color: var(--white);
+}
+.result__caption-title {
+    color: var(--white);
+    font-size: 32px;
+    font-family: "HankenGrotesk Bold";
+    margin-top: 32px;
+}
+.result__caption {
+    font-family: "HankenGrotesk Medium";
+    font-size: 18px;
+    margin-top: 28px;
+    line-height: 24px;
+    color: var(--light-lavender);
+}
+.summery {
+    padding-left: 40px;
+    flex-basis: 50%;
+}
+.summery__title {
+    margin-top: 44px;
+    font-family: "HankenGrotesk Bold";
+    color: var(--dark-gray-blue);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.summery__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: "HankenGrotesk Medium";
+    margin-bottom: 16px;
+}
+.summery__items > div {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+    border-radius: 10px;
+    max-width: 288px;
+}
+.reaction {
+    color: var(--light-red);
+    background: hsl(0, 100%, 67%, 20%);
+}
+.memory {
+    color: var(--orangey-yellow);
+    background-color: hsl(39, 100%, 56%, 20%);
+}
+.verbal {
+    color: var(--green-teal);
+    background-color: hsl(166, 100%, 37%, 20%);
+}
+.visual {
+    color: var(--cobalt-blue);
+    background-color: hsl(234, 85%, 45%, 20%);
+}
+.flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.result__score {
+    color: var(--dark-gray-blue);
+}
+.of {
+    opacity: 0.5;
+}
+button {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 20px 0;
+    width: 100%;
+    background-color: var(--dark-gray-blue);
+    border-radius: 100px;
+    color: var(--white);
+    font-family: "HankenGrotesk Bold";
+    font-size: 18px;
+}
+.btn {
+    max-width: 288px;
+    margin-top: 42px;
+}
+
+@media screen and (max-width: 772px) {
+    .main__box {
+        max-width: 650px;
+    }
+    .summery {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .main__box {
+        flex-direction: column;
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .result {
+        border-radius: 0 0 35px 35px;
+    }
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+    .score {
+        font-size: 48px;
+    }
+    .result__caption-title {
+        font-size: 24px;
+    }
+    .result__caption {
+        font-size: 16px;
+    }
+    .summery__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+}
